@@ -1,9 +1,11 @@
 import os
 import discord
+from keep_alive import keep_alive
 
+#keep_alive Start
+keep_alive()
 
-
-SRC = 'LINK'
+SRC = 'https://github.com/Blazzycrafter/dct/'
 PREFIX = '*'
 
 
