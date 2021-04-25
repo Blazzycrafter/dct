@@ -1,6 +1,7 @@
 import os
 import discord
 from keep_alive import keep_alive
+from commands import user_commands
 
 #keep_alive Start
 keep_alive()
@@ -26,8 +27,8 @@ async def on_message(message):
   else:
     print(str(message.author) +': '+ message.content)
   
-  if message.content == f'{PREFIX}src':
-    await message.channel.send(f'SRC: {SRC}')
+  if message.content.startswith == f'{PREFIX}':
+    await user_commands(message)
 
 
 
