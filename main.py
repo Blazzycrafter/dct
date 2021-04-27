@@ -1,13 +1,17 @@
 import os
 import discord
 from keep_alive import keep_alive
+from replit import db
 
 #keep_alive Start
 keep_alive()
 
 SRC = 'https://github.com/Blazzycrafter/dct/'
-PREFIX = '*'
-
+try:
+    PREFIX = db["PREFIX"]
+except:
+    db["PREFIX"] = "*"
+    PREFIX = db["prefix"]
 
 DCToken = os.environ['TOKEN']
 client = discord.Client()
@@ -28,7 +32,8 @@ async def on_message(message):
   
   if message.content == f'{PREFIX}src':
     await message.channel.send(f'SRC: {SRC}')
-
+  if message.content == f'{PREFIX}setprefix':
+    await message.channel.send('WIP')
 
 
 
