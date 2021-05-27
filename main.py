@@ -33,17 +33,25 @@ async def on_message(message):
   
   if message.content == f'{PREFIX}src':
     await message.channel.send(f'SRC: {SRC}')
-  elif message.content == f'{PREFIX}work':
-#    await message.channel.send('DEACTIVATED')
-    headers = {
-        'Accept': 'application/json',
-        'Authorization': f'{BT}'
-    }
-
-    data = '{ "cash": 10}'
-
-    response = requests.patch(f'https://unbelievaboat.com/api/v1/guilds/{Guild_id}/users/{message.author.id}', headers=headers, data=data)
-    await message.channel.send(response.text)
+  elif message.content == f'{PREFIX}slut':
+    await message.channel.send('DEACTIVATED reason: HardCoded Override')
+#    headers = {
+#        'Accept': 'application/json',
+#        'Authorization': f'{BT}'
+#    }
+#
+#    data = '{ "cash": 500}'
+#
+#    response = requests.patch(f'https://unbelievaboat.com/api/v1/guilds/{Guild_id}/users/{message.author.id}', headers=headers, data=data)
+#    
+#    if response.status_code == 200:
+#        
+#        answer = 'du hast einen jungen mit Dicken Eiern einen #geblasen! +500 money'
+#    else:
+#        answer = f'ERR:HTTPCODE:{response.status_code}'
+#    await message.channel.send(answer)
+    
+    
 
 
 
